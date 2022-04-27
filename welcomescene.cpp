@@ -136,7 +136,7 @@ void WelcomeScene::to_register(QString tempNumber, QString tempName, QString tem
                 Stu = new Student(tempNumber, tempName, tempSex, tempPassword);
                 ui->stackedWidget->setCurrentIndex(4);
             }
-            else if(tempNumber[0] == '1')
+            else if(tempNumber[0] == '1')//teacgher
             {
                 Tea = new Teacher(tempNumber, tempName, tempSex, tempPassword);
                 ui->stackedWidget->setCurrentIndex(3);
@@ -162,7 +162,7 @@ void WelcomeScene::to_logIn(QString tempNumber, QString tempPassword)
             if(tempNumber[0] == '9')
                 path = "./student/";
             else
-                path = "./teacher/";
+                path = "./teacher/";//tearcher
             QFile file(path.append(tempNumber+".txt"));
             file.open(QIODevice::ReadOnly|QIODevice::Text);
             QTextStream txtRead(&file);
