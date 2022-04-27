@@ -1,22 +1,27 @@
-#ifndef SUBJECT_H
+﻿#ifndef SUBJECT_H
 #define SUBJECT_H
 #include <QString>
-
-struct stulist{
-    QString stunumber;
-    QString stumark;
-    struct stulistx* next;
-};
 
 class Subject
 {
 public:
     QString number;
+    QString name;
+    QString tea;
+    QString classTime;
     int studentsize;
-    struct stulist;
+    QString stu[50];
+    QString stuName;
+    int mark[50];
 
+    Subject(QString, QString, QString, int);
     Subject(QString);
-    void addStudent(QString stunumber);
+    ~Subject();
+    void setTea(QString);
+    void addStudent(QString menu);//[],int
+    void addMark(QString[], int[]);
+    void record();
+    void reload();
 };
 
 #endif // SUBJECT_H
