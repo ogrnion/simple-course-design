@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/nl logo.ico</file>
+    </qresource>
+</RCC>
